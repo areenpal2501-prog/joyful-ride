@@ -1,0 +1,173 @@
+{
+  "app_name": "JoyRide",
+  "personality": "4 Tactile / Playful LIGHT",
+  "personality_one_liner": "A joyful, colorful ride-planning and transit experience that transforms everyday urban travel into a delightful, friendly adventure.",
+  "color": {
+    "surface": "#FFFDF9",
+    "onSurface": "#1F2328",
+    "surfaceSecondary": "#F5F2EB",
+    "onSurfaceSecondary": "#2C3238",
+    "surfaceTertiary": "#ECE7DE",
+    "onSurfaceTertiary": "#3B424A",
+    "surfaceInverse": "#1F2328",
+    "onSurfaceInverse": "#FFFDF9",
+    "brand": "#FF6B35",
+    "brandPrimary": "#FF5722",
+    "onBrandPrimary": "#FFFFFF",
+    "brandSecondary": "#FF9F1C",
+    "onBrandSecondary": "#1F2328",
+    "brandTertiary": "#FFE5D9",
+    "onBrandTertiary": "#D9381E",
+    "success": "#2EC4B6",
+    "onSuccess": "#FFFFFF",
+    "warning": "#FF9F1C",
+    "onWarning": "#1F2328",
+    "error": "#E71D36",
+    "onError": "#FFFFFF",
+    "info": "#3A86FF",
+    "onInfo": "#FFFFFF",
+    "border": "#E2DDD2",
+    "borderStrong": "#C8C0B2",
+    "divider": "#EFECE4",
+    "muted": "#7A8288",
+    "onBrand": "#FFFFFF"
+  },
+  "typography": {
+    "displayFontFamily": "Fredoka",
+    "textFontFamily": "Plus Jakarta Sans",
+    "scale": {
+      "sm": 12,
+      "base": 14,
+      "lg": 16,
+      "xl": 20,
+      "2xl": 24
+    }
+  },
+  "spacing": {
+    "rule": "Generous touchable padding, chunky rounded cards, and delightful vertical rhythm designed for effortless one-handed reach.",
+    "xs": 4,
+    "sm": 8,
+    "md": 12,
+    "lg": 16,
+    "xl": 24,
+    "2xl": 32,
+    "3xl": 48
+  },
+  "radius_tokens": {
+    "sm": 8,
+    "md": 16,
+    "lg": 24,
+    "pill": 999
+  },
+  "shadow_tier": "2",
+  "navigation": "bottom_tabs",
+  "icon_set": "Ionicons",
+  "glassmorphism": {
+    "enabled": "true",
+    "do's": [
+      "Use frosted glass on sticky search header over map background",
+      "Use translucent blurred cards for ride selection sheets"
+    ],
+    "dont's": [
+      "Do not blur dense form inputs or primary ride buttons"
+    ]
+  },
+  "platform_libraries": {
+    "glass": {
+      "ios": "expo-glass-effect",
+      "android": "expo-blur",
+      "low_end_android_fallback": "solid surfaceSecondary"
+    },
+    "image": "expo-image",
+    "blur": "expo-blur",
+    "bottom_sheet": "@gorhom/bottom-sheet",
+    "animation": "react-native-reanimated",
+    "gesture": "react-native-gesture-handler"
+  },
+  "screens": [
+    {
+      "name": "Auth",
+      "purpose": "Joyful entry point supporting Google sign-in, Email/password, and Phone verification with SMS code.",
+      "states": {
+        "loading": "Checking credentials with friendly bounce animation",
+        "empty": "Enter your details to start riding",
+        "error": "Invalid login or code. Please tap retry."
+      },
+      "layout": "Warm cream background with playful header illustration, tabbed auth selector for Google, Email, and Phone with SMS verification steps."
+    },
+    {
+      "name": "Home / Map",
+      "purpose": "Interactive map dashboard showing live nearby shuttle buses, joyful sightseeing spots, and quick ride booking options.",
+      "states": {
+        "loading": "Locating nearest sunshine shuttles...",
+        "empty": "No rides nearby. Try expanding your radius!",
+        "error": "Unable to load map GPS. Tap to retry."
+      },
+      "layout": "Full-bleed map view with floating frosted glass search bar at top, quick destination chips, and bottom sliding sheet for ride categories (Shuttle, Sightseeing, Taxi)."
+    },
+    {
+      "name": "Ride Booking",
+      "purpose": "Customizable pickup and dropoff selector with seeded sightseeing destinations, vehicle options, and fare estimates.",
+      "states": {
+        "loading": "Calculating best routes and happy drivers...",
+        "empty": "Select pickup and destination to see rides.",
+        "error": "Could not fetch route fares. Retry connection."
+      },
+      "layout": "Single column form with distinct pickup and dropoff pill inputs, horizontal vehicle selector cards with real logos/illustrations, and sticky bottom primary CTA."
+    },
+    {
+      "name": "Live Trip Status",
+      "purpose": "Real-time driver and vehicle tracking with animated progress, driver contact, and arrival countdown.",
+      "states": {
+        "loading": "Connecting to your driver...",
+        "empty": "No active trip found. Book a ride to see live tracking.",
+        "error": "GPS signal lost. Reconnecting..."
+      },
+      "layout": "Map top half with animated route line, bottom sheet displaying driver card, vehicle badge, ETA countdown timer, and emergency/chat buttons."
+    },
+    {
+      "name": "Sightseeing Itinerary",
+      "purpose": "Curated sightseeing experiences and custom itineraries for joyful urban exploration.",
+      "states": {
+        "loading": "Curating sunny day adventures...",
+        "empty": "No itineraries saved yet. Tap explore to add spots!",
+        "error": "Failed to load sightseeing data. Tap to retry."
+      },
+      "layout": "Magazine-style scrolling feed with gorgeous hero photo cards, tag pills, and instant 'Book Experience' action."
+    },
+    {
+      "name": "Ride History",
+      "purpose": "Past trips, booked shuttles, and booking confirmations log with receipt summaries and re-booking.",
+      "states": {
+        "loading": "Gathering past adventures...",
+        "empty": "No past rides yet. Your adventure log starts today!",
+        "error": "Could not retrieve ride history. Retry."
+      },
+      "layout": "Clean vertical list of trip cards with date badges, vehicle thumbnail, route summary, and rating indicator."
+    }
+  ],
+  "images": {
+    "hero_shuttle": {
+      "url": "https://images.unsplash.com/photo-1713096849818-0ef8023980e2",
+      "dark": "https://images.unsplash.com/photo-1713096849818-0ef8023980e2",
+      "alt": "Joyful city shuttle bus"
+    },
+    "sightseeing_spot": {
+      "url": "https://images.pexels.com/photos/28774408/pexels-photo-28774408.jpeg",
+      "dark": "https://images.pexels.com/photos/28774408/pexels-photo-28774408.jpeg",
+      "alt": "Scenic sightseeing trolley"
+    },
+    "auth_backdrop": {
+      "url": "https://images.unsplash.com/photo-1536687410384-91830e127b73",
+      "dark": "https://images.unsplash.com/photo-1536687410384-91830e127b73",
+      "alt": "Playful transit neon backdrop"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Adhere strictly to the Tactile / Playful LIGHT personality (Fredoka display font, Plus Jakarta Sans body, coral/orange accent #FF6B35, warm cream background #FFFDF9).",
+    "Ensure all touch targets are >= 44x44pt and cards fill horizontal space cleanly with md/lg margins.",
+    "Implement loading, empty, and error states for every data screen.",
+    "Provide sticky bottom CTAs on booking and ride setup screens with frosted glass containers.",
+    "Use real PNG logos or clean image slots for branded vehicles and destinations with gradient scrims on all image cards."
+  ]
+}
